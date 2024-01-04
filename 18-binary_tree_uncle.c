@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_sibling - the func finds the sibling of a node.
+ * binary_tree_uncle - the func finds the sibling of a node.
+ *binary_tree_t - the func of sibling uncle
  *@node: pointer to find the sibling.
  * Return: pointer to sibling.
  */
