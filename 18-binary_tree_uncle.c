@@ -15,7 +15,11 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		return (node->parent->right);
 
 }
-
+/**
+ * binary_tree_sibling - the func finds the sibling of a node.
+ *@node: pointer to find the sibling.
+ * Return: pointer to sibling.
+ */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	if (node == NULL)
