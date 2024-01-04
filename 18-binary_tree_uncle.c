@@ -5,24 +5,13 @@
  *@node: pointer to find the sibling.
  * Return: pointer to sibling.
  */
-binary_tree_t *binary_tree_sibling(binary_tree_t *node)
-{
-	if (node == NULL || node->parent == NULL)
-		return (NULL);
-	if (node->parent->right == node)
-		return (node->parent->left);
-	else
-		return (node->parent->right);
-
-}
-/**
- * binary_tree_sibling - the func finds the sibling of a node.
- *@node: pointer to find the sibling.
- * Return: pointer to sibling.
- */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	if (node == NULL)
+	if (node == NULL || node->parent == NULL || node->parent->parent == NULL)
+	{
 		return (NULL);
-	return (binary_tree_sibling(node->parent));
+	}
+	if (node->parent->parent->left == node->parent)
+		return (node->parent->parent->right);
+	return (node->parent->parent->left);
 }
